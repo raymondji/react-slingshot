@@ -19,6 +19,7 @@ browserSync({
   ui: {
     port: 3001
   },
+  open: false, // don't try to open a browser automatically
   server: {
     baseDir: 'src',
 
@@ -32,13 +33,10 @@ browserSync({
         // Use polling to watch for file changes since
         // Docker vfs doesn't support file system events
         watchOptions: {
-            aggregateTimeout: 300,
+            aggregateTimeout: 100,
             poll: true,
             ignored: /node_modules/
         },
-
-        // don't try to automatically open a browser
-        open: false,
 
         // These settings suppress noisy webpack output so only errors are displayed to the console.
         noInfo: false,

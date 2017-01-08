@@ -16,4 +16,4 @@ COPY . $HOME/workoutlogger
 RUN chown -R app:app $HOME/*
 USER app
 
-CMD ["npm", "start"]
+CMD ["npm", "start", "-s"]
