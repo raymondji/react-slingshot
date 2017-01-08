@@ -37,6 +37,9 @@ browserSync({
             ignored: /node_modules/
         },
 
+        // don't try to automatically open a browser
+        open: false,
+
         // These settings suppress noisy webpack output so only errors are displayed to the console.
         noInfo: false,
         quiet: false,
