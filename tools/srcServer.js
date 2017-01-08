@@ -29,6 +29,14 @@ browserSync({
         // Dev middleware can't access config, so we provide publicPath
         publicPath: config.output.publicPath,
 
+        // Use polling to watch for file changes since
+        // Docker vfs doesn't support file system events
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: true,
+            ignored: /node_modules/
+        },
+
         // These settings suppress noisy webpack output so only errors are displayed to the console.
         noInfo: false,
         quiet: false,

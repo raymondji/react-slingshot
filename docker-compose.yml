@@ -1,0 +1,10 @@
+workoutlogger:
+  build: .
+  environment:
+      NODE_ENV: development
+  volumes:
+    - .:/home/app/workoutlogger
+    - /home/app/workoutlogger/node_modules
+  ports:
+    - '3000:3000'
+    - '3001:3001'
