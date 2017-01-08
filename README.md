@@ -20,7 +20,7 @@ Why Slingshot?
 
 ## Get Started (using Docker)
 1. **Download and Install Docker** Follow the instructions here: https://docs.docker.com/engine/installation/
-2. **Clone the project** `git clone https://github.com/coryhouse/react-slingshot.git`.
+2. **Clone the project** `git clone https://github.com/raymondji/react-slingshot-docker.git`.
 3. **Start the app** `docker-compose up`. First time will take a while.
 4. **Rebuild when dependencies change** `docker-compose build` after modifying package.json
 
